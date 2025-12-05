@@ -47,7 +47,8 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 ---  
 
 
-## ⚙️ 코어 시스템 (Core System)
+### ⚙️ 코어 시스템 (Core System)
+---  
 # GameManager
 
 * 게임의 전체적인 흐름을 제어하는 핵심 시스템입니다.
@@ -69,8 +70,8 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 ---  
 
 
-## 🚶 플레이어 시스템 (Player System)
-
+### 🚶 플레이어 시스템 (Player System)
+---  
 * 플레이어는 책임 분리(SoC)를 기준으로 여러 기능 단위로 나누어 설계되어 있습니다.
 
 # Player
@@ -103,6 +104,7 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 
 
 ## 🤖 적 시스템 (Enemy System)
+---  
 # Enemy
 
 * 피격 처리,사망 등 적의 전체 동작을 제어하는 중심 클래스입니다.
@@ -117,6 +119,7 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 
 
 ## 💥 스킬 시스템 (Skill System)
+---  
 
 * 스킬은 공통 구조 + 각 스킨의 고유 스킬로 구성됩니다.
 
@@ -142,6 +145,7 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 
 
 ## 🧱 충돌 & 트리거 처리 (Collision & Trigger System)
+---  
 
 * 플레이어와 몬스터가 서로 충돌할지, 통과할지, 넉백이 발생할지 등은 Layer, Collision Matrix, OnTrigger… 함수 등을 조합해 처리합니다.
 
@@ -154,6 +158,7 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 
 
 ## 🤝 상호작용 시스템 (Interaction System)
+---  
 # IInteractable / IDamageable
 
 * 상호작용 가능한 모든 오브젝트는 특정 인터페이스를 구현합니다.
@@ -171,6 +176,7 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 
 
 ## 🛠️ 아이템 & 드랍/제작 시스템 (Item & Drop System)
+---  
 # CurrencyDrop / SkinDropPickup
 
 * 적이 드랍한 아이템을 획득하는 역할을 담당합니다. 근접 시 자동으로 먹게 합니다.
@@ -188,6 +194,7 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 
 
 ## 📜 NPC & 강화·진화 시스템 (Enhance / Evolve System)
+---  
 # EnhanceNPC
 
 * 스킨 강화 기능을 제공하는 NPC입니다. 필요 재화와 스탯 상승량을 계산해 PlayerStatus에 적용합니다.
@@ -201,6 +208,7 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 
  
 ## 🗺️ 맵 & UI 시스템 (Map & UI System)
+---  
 * Door
 
 * 맵 전환, 스테이지 이동을 담당하며 플레이어가 접근했을 때만 활성화됩니다.
