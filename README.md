@@ -42,19 +42,19 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 ---
 ## ⚙️ 주요 시스템별 구조 정리
 ## ⚙️ 코어 시스템 (Core System)
-GameManager
+# GameManager
 
 게임의 전체적인 흐름을 제어하는 핵심 시스템입니다.
 씬 전환, 일시정지(Pause), 재시작(Resume), 게임 종료 같은 공통 기능뿐만 아니라
 아이템 드랍, 로딩 처리 등 다양한 매니저들과 연동되어 게임 전체의 라이프사이클을 총괄합니다.
 
-ItemManager
+# ItemManager
 
 아이템 정보 관리, 드랍 데이터 로딩, 통화(골드·조각) 취급 등
 게임 전반의 아이템 처리 흐름을 제어하는 시스템입니다.
 CurrencyWallet과 연동되어 플레이어가 획득한 자원을 추적합니다.
 
-MonoSingleton
+# MonoSingleton
 
 플레이어, 플레이어 매니저, 각종 매니저 클래스 등을
 싱글톤 패턴으로 안정적으로 생성·관리하도록 도와주는 베이스 클래스입니다.
@@ -63,46 +63,46 @@ MonoSingleton
 
 플레이어는 책임 분리(SoC)를 기준으로 여러 기능 단위로 나누어 설계되어 있습니다.
 
-Player
+# Player
 
 플레이어의 핵심 컨트롤러로, 이동, 공격, 상호작용 등
 다른 Player 계열 클래스들을 종합적으로 제어하는 메인 클래스입니다.
 
-PlayerMovement
+# PlayerMovement
 
 키 입력·속도·중력·방향 전환 등
 플레이어의 실제 이동 로직을 담당하며,
 Player나 PlayerInputHandler가 전달하는 입력 값을 기반으로 작동합니다.
 
-PlayerAttack
+# PlayerAttack
 
 근접 공격, 스킬 발동, 히트 판정 등
 전투와 관련된 모든 로직을 담당합니다.
 SkillHitBoxData를 활용하여 적을 감지하고 데미지를 적용합니다.
 
-PlayerSkillController
+# PlayerSkillController
 
 장착된 스킨(skin type)에 따라 서로 다른 스킬 데이터를 로딩하며,
 다양한 곤충 스킬(바퀴벌레, 메뚜기, 사마귀)의 발동을 담당합니다.
 
-PlayerItemData
+# PlayerItemData
 
 플레이어가 현재 보유한 장비, 포션, 스킨, 조각 등의
 데이터를 통합 관리하는 클래스입니다.
 
-PlayerSaveData
+# PlayerSaveData
 
 플레이어의 스탯, 레벨, 스킨, 업그레이드 정보를 저장·로드하는 기능을 포함해
 게임 재접속 시 동일한 상태를 복원합니다.
 
 ## 🤖 적 시스템 (Enemy System)
-Enemy
+# Enemy
 
 AI 이동, 공격 패턴, 피격 처리, 넉백, 사망 등
 적의 전체 동작을 제어하는 중심 클래스입니다.
 적이 사망하면 Die()를 통해 드랍 생성 후 오브젝트를 제거합니다.
 
-EnemySaveData
+# EnemySaveData
 
 적의 체력, 강화 수치 등 일부 영구 데이터나
 난이도 조정용 추가 값을 저장해두기 위한 데이터 구조입니다.
@@ -111,7 +111,7 @@ EnemySaveData
 
 스킬은 공통 구조 + 각 스킨의 고유 스킬로 구성됩니다.
 
-BaseSkill
+#BaseSkill
 
 모든 스킬의 공통된 흐름(쿨타임, 발동, 종료)을 정의한 기본 클래스입니다.
 
@@ -120,7 +120,7 @@ BaseSkill
 각 곤충 스킨 전용 스킬로,
 BaseSkill을 상속하여 개별 히트박스, 이펙트, 이동 보조 기능 등이 구현됩니다.
 
-SkillHitBoxData
+# SkillHitBoxData
 
 스킬 히트박스 계산, 범위 내 적 감지 기능을 담당하는 핵심 스크립트입니다.
 스킬 발동 시 OverlapBox·Raycast 등을 통해 적을 탐지하고
@@ -141,63 +141,63 @@ SpawnDrop() 메서드를 통해 골드·스킨 조각·윙 조각 등을 상황�
 “트리거를 무시하고 지나가도록” 처리하는 예시도 포함됩니다.
 
 ## 🤝 상호작용 시스템 (Interaction System)
-IInteractable / IDamageable
+# IInteractable / IDamageable
 
 상호작용 가능한 모든 오브젝트는 특정 인터페이스를 구현합니다.
 
-PlayerInteract
+# PlayerInteract
 
 플레이어 앞의 NPC, 문, 아이템 등을 감지하고
 인터페이스 구현 여부에 따라 적절한 상호작용을 실행합니다.
 
-NPCInteractOpener
+# NPCInteractOpener
 
 NPC에 접근하면 상호작용 UI를 열어주는 기능을 담당하며,
 강화 NPC·진화 NPC와 직접 연결됩니다.
 
 ## 🛠️ 아이템 & 드랍/제작 시스템 (Item & Drop System)
-CurrencyDrop / SkinDropPickup
+# CurrencyDrop / SkinDropPickup
 
 적이 드랍한 아이템을 획득하는 역할을 담당합니다.
 근접 시 자동으로 먹게 합니다.
 
-CurrencyWallet
+# CurrencyWallet
 
 플레이어가 보유한 통화를 집계·관리합니다.
 골드, 스킨 조각, 윙 조각 등이 저장됩니다.
 
-ItemLoader
+# ItemLoader
 
 아이템 데이터(ScriptableObject 기반 아이템 정보)를
 초기 로드하거나 특정 스킨에 필요한 데이터만 선별합니다.
 
 ## 📜 NPC & 강화·진화 시스템 (Enhance / Evolve System)
-EnhanceNPC
+# EnhanceNPC
 
 스킨 강화 기능을 제공하는 NPC입니다.
 필요 재화와 스탯 상승량을 계산해 PlayerStatus에 적용합니다.
 
-EvolveNPC
+# EvolveNPC
 
 특정 조건을 만족하면 스킨 진화를 가능하게 하는 NPC로,
 EvolutionUpgradeData를 기반으로 성공 여부·재화 소모를 결정합니다.
 
 ## 🗺️ 맵 & UI 시스템 (Map & UI System)
-Door
+# Door
 
 맵 전환, 스테이지 이동을 담당하며
 플레이어가 접근했을 때만 활성화됩니다.
 
-InterectingUi
+# InterectingUi
 
 상호작용 가능할 때 화면에 F 버튼 UI를 띄우는 기능을 담당합니다.
 
-EasyRandom
+# EasyRandom
 
 맵 오브젝트를 랜덤 배치하거나,
 특정 지형 기반으로 스폰을 조절하는 유틸리티 역할입니다.
 
-MainSceneUI / PlayerUI
+# MainSceneUI / PlayerUI
 
 플레이어의 체력, 스태미나, 경험치, 현재 스킨 등
 게임 진행에 필요한 정보를 HUD 형태로 표시합니다.
