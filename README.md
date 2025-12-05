@@ -36,18 +36,58 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 
 Scripts/
 ├─ Character/
-│ ├─ CharacterData/
+│    ├─ CharacterData/
+│    ├─ PermanentStats/
+│    ├─ SkinUpdateState/
 ├─ Enemy/
-├─ Enum
+│    ├─ Enemy/
+│    ├─ EnemySaveData/
+├─ Enum/
+│    ├─ Consts/
+│    ├─ Enum/
 ├─ Interface/
+│    ├─ IDamageable/
+│    ├─ IInteractable/
 ├─ Item/
+│    ├─ CurrencyDrop/
+│    ├─ CurrencyWallet/
+│    ├─ ItemLoader/
+│    ├─ SkinDropPickup/
 ├─ Manager/
+│    ├─ GameManager/
+│    ├─ ItemManager/
+│    ├─ MonoSingleton/
 ├─ map/
+│    ├─ Door/
+│    ├─ EasyRandom/
+│    ├─ InterectingUi/
 ├─ Npc/
+│    ├─ EnhanceNPC/
+│    ├─ EvolveNPC/
+│    ├─ NPCInteractOpener/
 ├─ Player/
-├─ ScriptableObject
-├─ Skill
-└─ UI/
+│    ├─ Player/
+│    ├─ PlayerAttack/
+│    ├─ PlayerInteract/
+│    ├─ PlayerItemData/
+│    ├─ PlayerManager/
+│    ├─ PlayerMovement/
+│    ├─ PlayerSaveData/
+│    ├─ PlayerSkillController/
+├─ ScriptableObject/
+│    ├─ EquipmentItemData/
+│    ├─ EvolutionUpgradeData/
+│    ├─ itemData/
+│    ├─ SkinEnhanceData/
+├─ Skill/
+│    ├─ BaseSkill/
+│    ├─ CockroachSkill/
+│    ├─ GrasshopperSkill/
+│    ├─ MantisSkill/
+│    ├─ SkillHitBoxData/
+├─ UI/
+│    ├─ MainSceneUI/
+└─   ├─ PlayerUi/
 
 ```
 ---
