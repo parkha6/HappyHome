@@ -1,7 +1,7 @@
 # 핵 앤 슬래시 로그라이트
 2D 횡스크롤 핵 앤 슬래시 로그라이트  
 
----
+---  
 
 배경- AI, 에셋  
 필드 오브젝트 바닥  
@@ -10,13 +10,13 @@
 
 ## 에셋 저작권
 * 폰트  - [여기어때 잘난체](https://gccompany.co.kr/font)
-# Unity ProjectH
+# Unity ProjectH  
 
 
-README: 이 저장소는 Unity 프로젝트 설명서입니다.
+README: 이 저장소는 Unity 프로젝트 설명서입니다.  
 
 
----
+---  
 
 
 ## 개요
@@ -29,17 +29,17 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 * 플레이어 및 몬스터 충돌/트리거 처리 개선 예시
 * 드랍 생성(골드/스킨/윙 등) 시스템
 * 인벤토리 UI 구조 및 슬롯 예시
-* 강화(UI)와 관련된 데미지/스탯/업데이트 구조
+* 강화(UI)와 관련된 데미지/스탯/업데이트 구조  
 
 
----
+---  
 
 
 ## 와이어프레임
 <img width="3411" height="1947" alt="Image" src="https://github.com/user-attachments/assets/41dedf0e-9602-477a-9031-bee88abc2322" />
 
 
----
+---  
 ## ⚙️ 코어 시스템 (Core System)
 # GameManager
 
@@ -58,7 +58,7 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 * 플레이어, 플레이어 매니저, 각종 매니저 클래스 등을
 * 싱글톤 패턴으로 안정적으로 생성·관리하도록 도와주는 베이스 클래스입니다.
   
----
+---  
 
 ## 🚶 플레이어 시스템 (Player System)
 
@@ -89,7 +89,7 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 
 * 플레이어가 현재 보유한 장비, 포션, 스킨, 조각 등의 데이터를 통합 관리하는 클래스입니다.
   
----
+---  
 
 ## 🤖 적 시스템 (Enemy System)
 # Enemy
@@ -101,13 +101,13 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 
 * 체력, 강화 수치 등 일부 영구 데이터나 난이도 조정용 추가 값을 저장해두기 위한 데이터 구조입니다.
   
----
+---  
 
 ## 💥 스킬 시스템 (Skill System)
 
 * 스킬은 공통 구조 + 각 스킨의 고유 스킬로 구성됩니다.
 
-#BaseSkill
+# BaseSkill
 
 * 모든 스킬의 공통된 흐름(쿨타임, 발동, 종료)을 정의한 기본 클래스입니다.
 
@@ -115,7 +115,7 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 
 *각 곤충 스킨 전용 스킬로, BaseSkill을 상속하여 개별 히트박스, 이펙트, 이동 보조 기능 등이 구현됩니다.
 
-# SkillHitBoxData
+# 스킬 히트박스
 
 * 스킬 히트박스 계산, 범위 내 적 감지 기능을 담당하는 핵심 스크립트입니다.
 * 스킬 발동 시 OverlapBox·Raycast 등을 통해 적을 탐지하고
@@ -124,7 +124,7 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 * 또한 개발 편의성을 위해 Debug.DrawLine 등을 사용해
 * 히트박스가 실제 게임 화면에서도 시각적으로 표시되도록 구성할 수 있습니다.
 
----
+---  
 
 ## 🧱 충돌 & 트리거 처리 (Collision & Trigger System)
 
@@ -134,67 +134,67 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 
 * 상황에 따라 플레이어가 몬스터와 충돌했을 때 “트리거를 무시하고 지나가도록” 처리하는 예시도 포함됩니다.
   
----
+---  
 
 ## 🤝 상호작용 시스템 (Interaction System)
-* IInteractable / IDamageable
+# IInteractable / IDamageable
 
 * 상호작용 가능한 모든 오브젝트는 특정 인터페이스를 구현합니다.
 
-* PlayerInteract
+# PlayerInteract
 
 * 플레이어 앞의 NPC, 문, 아이템 등을 감지하고 인터페이스 구현 여부에 따라 적절한 상호작용을 실행합니다.
 
-* NPCInteractOpener
+# NPCInteractOpener
 
 * NPC에 접근하면 상호작용 UI를 열어주는 기능을 담당하며, 강화 NPC·진화 NPC와 직접 연결됩니다.
   
----
+---  
 
 ## 🛠️ 아이템 & 드랍/제작 시스템 (Item & Drop System)
-* CurrencyDrop / SkinDropPickup
+# CurrencyDrop / SkinDropPickup
 
 * 적이 드랍한 아이템을 획득하는 역할을 담당합니다. 근접 시 자동으로 먹게 합니다.
 
-* CurrencyWallet
+# CurrencyWallet
 
 * 플레이어가 보유한 통화를 집계·관리합니다. 골드, 스킨 조각, 윙 조각 등이 저장됩니다.
 
-* ItemLoader
+# ItemLoader
 
 * 아이템 데이터(ScriptableObject 기반 아이템 정보)를 초기 로드하거나 특정 스킨에 필요한 데이터만 선별합니다.
   
----
+---  
 
 ## 📜 NPC & 강화·진화 시스템 (Enhance / Evolve System)
-* EnhanceNPC
+# EnhanceNPC
 
 * 스킨 강화 기능을 제공하는 NPC입니다. 필요 재화와 스탯 상승량을 계산해 PlayerStatus에 적용합니다.
 
-* EvolveNPC
+# EvolveNPC
 
 * 특정 조건을 만족하면 스킨 진화를 가능하게 하는 NPC로, EvolutionUpgradeData를 기반으로 성공 여부·재화 소모를 결정합니다.
   
----
-
+---  
+ 
 ## 🗺️ 맵 & UI 시스템 (Map & UI System)
 * Door
 
 * 맵 전환, 스테이지 이동을 담당하며 플레이어가 접근했을 때만 활성화됩니다.
 
-* InterectingUi
+# InterectingUi
 
 * 상호작용 가능할 때 화면에 F 버튼 UI를 띄우는 기능을 담당합니다.
 
-* EasyRandom
+# EasyRandom
 
 * 맵 오브젝트를 랜덤 배치하거나, 특정 지형 기반으로 스폰을 조절하는 유틸리티 역할입니다.
 
-* MainSceneUI / PlayerUI
+# MainSceneUI / PlayerUI
 
 * 플레이어의 체력, 스태미나, 경험치, 현재 스킨 등 게임 진행에 필요한 정보를 HUD 형태로 표시합니다.
   
----
+---  
 
 ## 스크립트 구조
 
@@ -257,7 +257,7 @@ Scripts/
 
 
 ```
----
+---  
 
 ## 주요 시스템 및 구성 요소 요약
 
