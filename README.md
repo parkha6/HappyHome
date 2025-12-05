@@ -1,7 +1,9 @@
 # 핵 앤 슬래시 로그라이트
 2D 횡스크롤 핵 앤 슬래시 로그라이트  
 
+
 ---  
+
 
 배경- AI, 에셋  
 필드 오브젝트 바닥  
@@ -32,14 +34,19 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 * 강화(UI)와 관련된 데미지/스탯/업데이트 구조  
 
 
+
 ---  
+
 
 
 ## 와이어프레임
 <img width="3411" height="1947" alt="Image" src="https://github.com/user-attachments/assets/41dedf0e-9602-477a-9031-bee88abc2322" />
 
 
+
 ---  
+
+
 ## ⚙️ 코어 시스템 (Core System)
 # GameManager
 
@@ -57,8 +64,10 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 
 * 플레이어, 플레이어 매니저, 각종 매니저 클래스 등을
 * 싱글톤 패턴으로 안정적으로 생성·관리하도록 도와주는 베이스 클래스입니다.
+
   
 ---  
+
 
 ## 🚶 플레이어 시스템 (Player System)
 
@@ -88,8 +97,10 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 # PlayerItemData
 
 * 플레이어가 현재 보유한 장비, 포션, 스킨, 조각 등의 데이터를 통합 관리하는 클래스입니다.
+
   
 ---  
+
 
 ## 🤖 적 시스템 (Enemy System)
 # Enemy
@@ -100,8 +111,10 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 # EnemySaveData
 
 * 체력, 강화 수치 등 일부 영구 데이터나 난이도 조정용 추가 값을 저장해두기 위한 데이터 구조입니다.
+
   
 ---  
+
 
 ## 💥 스킬 시스템 (Skill System)
 
@@ -124,7 +137,9 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 * 또한 개발 편의성을 위해 Debug.DrawLine 등을 사용해
 * 히트박스가 실제 게임 화면에서도 시각적으로 표시되도록 구성할 수 있습니다.
 
+
 ---  
+
 
 ## 🧱 충돌 & 트리거 처리 (Collision & Trigger System)
 
@@ -133,8 +148,10 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 * 몬스터 Die() 시점에 드랍 생성 후 Destroy(gameObject)로 제거하며, SpawnDrop() 메서드를 통해 골드·스킨 조각·윙 조각 등을 상황에 따라 드랍합니다.
 
 * 상황에 따라 플레이어가 몬스터와 충돌했을 때 “트리거를 무시하고 지나가도록” 처리하는 예시도 포함됩니다.
+
   
 ---  
+
 
 ## 🤝 상호작용 시스템 (Interaction System)
 # IInteractable / IDamageable
@@ -148,8 +165,10 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 # NPCInteractOpener
 
 * NPC에 접근하면 상호작용 UI를 열어주는 기능을 담당하며, 강화 NPC·진화 NPC와 직접 연결됩니다.
+
   
 ---  
+
 
 ## 🛠️ 아이템 & 드랍/제작 시스템 (Item & Drop System)
 # CurrencyDrop / SkinDropPickup
@@ -163,8 +182,10 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 # ItemLoader
 
 * 아이템 데이터(ScriptableObject 기반 아이템 정보)를 초기 로드하거나 특정 스킨에 필요한 데이터만 선별합니다.
+
   
 ---  
+
 
 ## 📜 NPC & 강화·진화 시스템 (Enhance / Evolve System)
 # EnhanceNPC
@@ -174,8 +195,10 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 # EvolveNPC
 
 * 특정 조건을 만족하면 스킨 진화를 가능하게 하는 NPC로, EvolutionUpgradeData를 기반으로 성공 여부·재화 소모를 결정합니다.
+
   
 ---  
+
  
 ## 🗺️ 맵 & UI 시스템 (Map & UI System)
 * Door
@@ -193,8 +216,10 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 # MainSceneUI / PlayerUI
 
 * 플레이어의 체력, 스태미나, 경험치, 현재 스킨 등 게임 진행에 필요한 정보를 HUD 형태로 표시합니다.
+
   
 ---  
+
 
 ## 스크립트 구조
 
@@ -257,7 +282,8 @@ Scripts/
 
 
 ```
----  
+--- 
+
 
 ## 주요 시스템 및 구성 요소 요약
 
