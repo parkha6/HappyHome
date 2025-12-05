@@ -36,6 +36,7 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 
 Scripts/
 ├─ Character/
+│ ├─ CharacterData/
 ├─ Enemy/
 ├─ Enum
 ├─ Interface/
