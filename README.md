@@ -41,6 +41,10 @@
 * 강화 UI 및 스탯 처리 구조
 
 ---
+# 🗂️ 팀원 소개
+<img width="1137" height="518" alt="Image" src="https://github.com/user-attachments/assets/7b2fc846-132f-4701-9abc-6ef0aca981e3" />
+
+---
 
 # 🗂️ 와이어프레임
 
