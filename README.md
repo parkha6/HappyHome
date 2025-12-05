@@ -8,7 +8,7 @@
 
 ## 에셋 저작권
 * 폰트  - [여기어때 잘난체](https://gccompany.co.kr/font)
-# 6조1205 Unity Project
+# Unity ProjectH
 
 README: 이 저장소는 Unity 프로젝트 설명서입니다.
 
