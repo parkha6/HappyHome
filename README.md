@@ -33,16 +33,21 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 ## 스크립트 구조
 
 ```text
-Assets/
-  ├─ Scenes/
-  ├─ Scripts/
-  │   ├─ Player/
-  │   ├─ Enemy/
-  │   ├─ UI/
-  │   └─ Systems/
-  ├─ Prefabs/
-  ├─ Art/
-  └─ Resources/
+
+Scripts/
+├─ Character/
+├─ Enemy/
+├─ Enum
+├─ Interface/
+├─ Item/
+├─ Manager/
+├─ map/
+├─ Npc/
+├─ Player/
+├─ ScriptableObject
+├─ Skill
+└─ UI/
+
 ```
 ---
 
