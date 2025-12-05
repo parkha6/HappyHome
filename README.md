@@ -27,6 +27,9 @@ README: 이 저장소는 Unity 프로젝트 설명서입니다.
 * 강화(UI)와 관련된 데미지/스탯/업데이트 구조
 
 이 저장소는 학습용/프로토타입용으로 설계되었으며, 실사용 전 리팩토링과 테스트가 필요합니다.
+---
+## 와이어프레임
+<img width="3411" height="1947" alt="Image" src="https://github.com/user-attachments/assets/41dedf0e-9602-477a-9031-bee88abc2322" />
 
 ---
 
